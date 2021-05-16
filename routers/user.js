@@ -123,20 +123,6 @@ router.get('/users/:id/avatar', async (req, res) => {
     res.status(400).send({ message: 'User not found' });
   }
 });
-//get a user
-// router.get('/users/:id', async (req, res) => {
-//   const _id = req.params.id;
-
-//   try {
-//     const user = await User.findById(_id);
-//     if (!user) {
-//       return res.status(404).send();
-//     }
-//     res.send(user);
-//   } catch (error) {
-//     res.status(500).send();
-//   }
-// });
 
 //delete a user
 router.delete('/users/me', auth, async (req, res) => {
